@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Musik Saya</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(black, purple);
+      color: white;
+      text-align: center;
+      font-family: Arial;
+    }
+
+    .container {
+      margin-top: 100px;
+    }
+
+    h1 {
+      font-size: 40px;
+    }
+
+    button {
+      padding: 12px 25px;
+      margin: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 20px;
+      background: purple;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: pink;
+    }
+
+    img {
+      width: 150px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <img src="cover.jpg" alt="cover">
+
+    <h1>🎧 Musik Favorit</h1>
+    <p>Klik tombol untuk play musik</p>
+
+    <audio id="musik">
+      <source src="musik.mp3" type="audio/mpeg">
+    </audio>
+
+    <br>
+
+    <button onclick="playMusic()">▶️ Play</button>
+    <button onclick="pauseMusic()">⏸️ Pause</button>
+  </div>
+
+  <script>
+    var lagu = document.getElementById("musik");
+
+    function playMusic() {
+      lagu.play();
+    }
+
+    function pauseMusic() {
+      lagu.pause();
+    }
+  </script>
+
+</body>
+</html>
